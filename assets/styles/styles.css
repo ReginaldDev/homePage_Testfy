@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+.navbar-brand img {
+    height: 80px;
+    width: auto;
+}
+
+header {
+    background: linear-gradient(135deg, #65aefc, #976ce0);
+    color: #000000;
+    text-shadow:1px 1px 2px #333333;
+    padding: 60px 0;
+}
+
+section {
+    
+    padding: 60px 0;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Seção Sobre */
+.text-about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+#about img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+}
+
+/* Responsividade: em dispositivos menores, a imagem desaparece */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about img {
+        display: none;
+    }
+}
+
+/* Seção Serviços */
+#services .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#services .col-md-4 {
+    flex: 1 1 30%; /* Em telas maiores, cada item ocupa 30% */
+    box-sizing: border-box;
+    padding: 20px; /* Adiciona um pouco de espaço dentro do card */
+    background-color: #fff; /* Cor de fundo para o card */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
+    
+}
+
+#services .col-md-4 h3 {
+    margin-top: 10px;
+}
+
+/* Responsividade para 2 colunas em telas médias */
+@media (max-width: 992px) {
+    #services .col-md-4 {
+        flex: 1 1 45%; /* 2 colunas em telas médias */
+    }
+}
+
+/* Responsividade para 1 coluna em telas pequenas */
+@media (max-width: 576px) {
+    #services .col-md-4 {
+        flex: 1 1 100%; /* 1 coluna em telas pequenas */
+    }
+}
+
+/* Estilo dos cards na seção de serviços */
+#services .col-md-4 {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#services .col-md-4:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustes de margem nos títulos e textos */
+#services .col-md-4 p {
+    font-size: 1rem;
+    color: #555;
+}
