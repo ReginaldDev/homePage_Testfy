@@ -79,6 +79,10 @@ footer {
     padding: 20px 0;
 }
 
+footer a:hover{
+    font-size: 1.2rem;
+}
+
 /* ---------- SEÇÃO SOBRE ---------- */
 #about {
     display: flex;
@@ -105,10 +109,11 @@ footer {
     margin-top: 10px;
 }
 
-#about .imagem img {
+#about .imagem-about img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    filter: opacity(80%);
 }
 
 /* Responsividade */
@@ -127,7 +132,7 @@ footer {
         max-width: 100%;
     }
 
-    #about .imagem {
+    #about .imagem-about {
         display: none;
     }
 }
@@ -184,50 +189,77 @@ footer {
 /* ---------- SEÇÃO INTEGRAÇÕES ---------- */
 #integracoes {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column; /* Cards em coluna */
+    gap: 20px;
     padding: 50px;
 }
 
-#integracoes .content {
-    max-width: 50%;
+#integracoes .card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
 
-#integracoes .subtitle {
+#integracoes .card.info1 {
+    flex-direction: row; /* Imagem à esquerda e texto à direita */
+}
+
+#integracoes .card.info2 {
+    flex-direction: row-reverse; /* Card à esquerda e imagem à direita */
+}
+
+#integracoes .card.info3 {
+    flex-direction: row; /* Imagem à esquerda e texto à direita */
+}
+
+#integracoes .card img {
+    width: 50%; /* Para manter a imagem proporcional ao card */
+    max-width: 500px; /* Limite máximo para não ficar exagerado em telas grandes */
+    height: auto; /* Ajusta automaticamente a altura com base na largura */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#integracoes .texto {
+    display: flex;
+    flex-direction: column;
+}
+
+#integracoes .texto .subtitle {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     color: #333;
 }
 
-#integracoes .title {
+#integracoes .texto .title {
     font-size: 32px;
     font-weight: bold;
     color: #000;
+    margin: 5px 0;
 }
 
-#integracoes .description {
+#integracoes .texto .description {
     font-size: 18px;
     color: #333;
     margin-top: 10px;
 }
 
-#integracoes .highlight {
+#integracoes .texto .highlight {
     font-size: 18px;
     color: #333;
     margin-top: 20px;
 }
 
-#integracoes .highlight span {
+#integracoes .texto .highlight span {
     font-size: 32px;
     font-weight: bold;
     color: #8000ff;
-}
-
-#integracoes .image img {
-    max-width: 100%;
-    height: auto;
 }
 
 /* Responsividade */
@@ -237,14 +269,22 @@ footer {
         text-align: center;
     }
 
-    #integracoes .content {
-        max-width: 100%;
+    #integracoes .card {
+        flex-direction: column; /* Imagem fica acima do texto em telas menores */
+        text-align: center;
     }
 
-    #integracoes .image {
-        display: none;
+    #integracoes .card img {
+        margin: 0 auto; /* Centraliza a imagem */
+        width: 100px; /* Ajusta o tamanho da imagem */
+    }
+
+    #integracoes .texto {
+        align-items: center;
     }
 }
+
+
 
 /* ---------- LINKS ---------- */
 .mail-link {
@@ -253,5 +293,6 @@ footer {
 }
 
 .mail-link:hover {
+    font-size: 1.05rem;
     color: #65aefc;
 }
