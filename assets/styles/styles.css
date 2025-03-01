@@ -1,114 +1,257 @@
+/* ---------- ESTILOS GERAIS ---------- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
-    color: #333333;
-}
-
-.navbar-brand img {
-    height: 80px;
-    width: auto;
-}
-
-header {
-    background: linear-gradient(135deg, #65aefc, #976ce0);
-    color: #000000;
-    text-shadow:1px 1px 2px #333333;
-    padding: 60px 0;
-}
-
-section {
-    
-    padding: 60px 0;
+    color: #333;
 }
 
 h2 {
     margin-bottom: 30px;
 }
 
+section {
+    padding: 60px 0;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: linear-gradient(135deg, #65aefc, #a982ec);
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    padding: 80px 0;
+    background-position: center;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+header .btn {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+header .btn:hover {
+    background-color: #966ce098;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* ---------- NAVBAR ---------- */
+.navbar-brand img {
+    height: 80px;
+    width: auto;
+}
+
+.nav-item {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+/* Navbar - Efeito Hover */
+.navbar-nav .nav-link {
+    font-size: 18px; /* Tamanho padrão */
+    transition: all 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #976ce0 !important; /* Cor ao passar o mouse (substitua pelo desejado) */
+    font-size: 19px; /* Aumenta o tamanho do texto ao passar o mouse */
+}
+/* ---------- FOOTER ---------- */
 footer {
     background-color: #343a40;
     color: white;
     padding: 20px 0;
 }
 
-/* Seção Sobre */
-.text-about{
+/* ---------- SEÇÃO SOBRE ---------- */
+#about {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
-    width: 100%;
+    gap: 40px;
+    padding: 50px;
 }
 
-#about img {
-    width: 100%;
-    max-width: 500px;
-    display: block;
+#about .texto {
+    max-width: 50%;
 }
 
-/* Responsividade: em dispositivos menores, a imagem desaparece */
+#about .titulo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#about .descricao {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+#about .imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     #about {
+        padding: 0;
+        padding-top: 10px;
         flex-direction: column;
         text-align: center;
     }
 
-    #about img {
+    #about .texto{
+        max-width: 80%;
+    }
+    #about .descricao {
+        max-width: 100%;
+    }
+
+    #about .imagem {
         display: none;
     }
 }
 
-/* Seção Serviços */
+/* ---------- SEÇÃO SERVIÇOS ---------- */
 #services .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px; /* Aumentei o espaçamento entre os cards */
 }
 
-#services .col-md-4 {
-    flex: 1 1 30%; /* Em telas maiores, cada item ocupa 30% */
-    box-sizing: border-box;
-    padding: 20px; /* Adiciona um pouco de espaço dentro do card */
-    background-color: #fff; /* Cor de fundo para o card */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
-    
+#services .service-card {
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px; /* Deixei o border-radius mais suave */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#services .col-md-4 h3 {
+#services .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#services .service-card h3 {
+    margin-top: 10px;
+    font-size: 1.5rem; /* Maior título para mais destaque */
+}
+
+#services .service-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#services h2 {
+    font-size: 2.5rem; /* Maior tamanho de título para a seção */
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Responsividade */
+@media (max-width: 992px) {
+    #services .service-card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    #services .service-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* ---------- SEÇÃO INTEGRAÇÕES ---------- */
+#integracoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px;
+}
+
+#integracoes .content {
+    max-width: 50%;
+}
+
+#integracoes .subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+
+#integracoes .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+}
+
+#integracoes .description {
+    font-size: 18px;
+    color: #333;
     margin-top: 10px;
 }
 
-/* Responsividade para 2 colunas em telas médias */
-@media (max-width: 992px) {
-    #services .col-md-4 {
-        flex: 1 1 45%; /* 2 colunas em telas médias */
+#integracoes .highlight {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#integracoes .highlight span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #8000ff;
+}
+
+#integracoes .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #integracoes {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #integracoes .content {
+        max-width: 100%;
+    }
+
+    #integracoes .image {
+        display: none;
     }
 }
 
-/* Responsividade para 1 coluna em telas pequenas */
-@media (max-width: 576px) {
-    #services .col-md-4 {
-        flex: 1 1 100%; /* 1 coluna em telas pequenas */
-    }
+/* ---------- LINKS ---------- */
+.mail-link {
+    text-decoration: none;
+    color: #fff;
 }
 
-/* Estilo dos cards na seção de serviços */
-#services .col-md-4 {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-#services .col-md-4:hover {
-    transform: scale(1.05);
-}
-
-/* Ajustes de margem nos títulos e textos */
-#services .col-md-4 p {
-    font-size: 1rem;
-    color: #555;
+.mail-link:hover {
+    color: #65aefc;
 }
