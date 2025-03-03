@@ -188,6 +188,7 @@ footer a:hover{
 
 /* ---------- SEÇÃO INTEGRAÇÕES ---------- */
 #integracoes {
+    background: linear-gradient(135deg,#a982ec, #65aefc);
     display: flex;
     flex-direction: column; /* Cards em coluna */
     gap: 20px;
@@ -298,8 +299,19 @@ footer a:hover{
     }
 }
 
+/*----------- Contato----------*/
+#contact{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.452);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    
+    background:linear-gradient(#343a401c, #fffefe) ;
 
+}
 
+#contact p {
+    padding-bottom: 50px;
+}
 /* ---------- LINKS ---------- */
 .mail-link {
     text-decoration: none;
