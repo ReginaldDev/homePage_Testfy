@@ -145,10 +145,10 @@ footer a:hover{
 }
 
 #services .service-card {
-    padding: 25px;
-    background-color: #fff;
-    border-radius: 12px; /* Deixei o border-radius mais suave */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px !important;
+    background-color: #fff !important;
+    border-radius: 12px !important; /* Deixei o border-radius mais suave */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -217,10 +217,23 @@ footer a:hover{
     flex-direction: row; /* Imagem à esquerda e texto à direita */
 }
 
+#integracoes .card.info1,
+#integracoes .card.info2,
+#integracoes .card.info3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#integracoes .card.info1:hover,
+#integracoes .card.info2:hover,
+#integracoes .card.info3:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adiciona sombra para destaque */
+}
+
 #integracoes .card img {
     width: 50%; /* Para manter a imagem proporcional ao card */
     max-width: 500px; /* Limite máximo para não ficar exagerado em telas grandes */
-    height: auto; /* Ajusta automaticamente a altura com base na largura */
+    height: 250px; /* Ajusta automaticamente a altura com base na largura */
     border-radius: 8px;
     object-fit: cover;
 }
@@ -230,33 +243,33 @@ footer a:hover{
     flex-direction: column;
 }
 
-#integracoes .texto .subtitle {
+#integracoes .texto .subtitulo {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     color: #333;
 }
 
-#integracoes .texto .title {
+#integracoes .texto .titulo {
     font-size: 32px;
     font-weight: bold;
     color: #000;
     margin: 5px 0;
 }
 
-#integracoes .texto .description {
+#integracoes .texto .descricao {
     font-size: 18px;
     color: #333;
     margin-top: 10px;
 }
 
-#integracoes .texto .highlight {
+#integracoes .texto .destaque {
     font-size: 18px;
     color: #333;
     margin-top: 20px;
 }
 
-#integracoes .texto .highlight span {
+#integracoes .texto .destaque span {
     font-size: 32px;
     font-weight: bold;
     color: #8000ff;
@@ -275,6 +288,7 @@ footer a:hover{
     }
 
     #integracoes .card img {
+        display: none;
         margin: 0 auto; /* Centraliza a imagem */
         width: 100px; /* Ajusta o tamanho da imagem */
     }
