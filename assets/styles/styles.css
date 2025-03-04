@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;
+    padding-top: 70px;
 }
 
 h2 {
@@ -21,6 +22,8 @@ header {
     padding: 80px 0;
     background-position: center;
     background-size: cover;
+    background-color: #e5e5f7;
+    
 }
 
 header h1 {
@@ -90,6 +93,7 @@ footer a:hover{
     justify-content: space-between;
     gap: 40px;
     padding: 50px;
+    text-align: justify;
 }
 
 #about .texto {
@@ -110,7 +114,7 @@ footer a:hover{
 }
 
 #about .imagem-about img {
-    max-width: 100%;
+    max-width: 500px;
     height: auto;
     border-radius: 10px;
     filter: opacity(80%);
@@ -170,7 +174,7 @@ footer a:hover{
 #services h2 {
     font-size: 2.5rem; /* Maior tamanho de título para a seção */
     font-weight: 700;
-    letter-spacing: 2px;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 /* Responsividade */
@@ -193,10 +197,12 @@ footer a:hover{
     flex-direction: column; /* Cards em coluna */
     gap: 20px;
     padding: 50px;
+    flex-wrap: wrap;
 }
 
 #integracoes .card {
     display: flex;
+    width: 85%;
     align-items: center;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -208,14 +214,17 @@ footer a:hover{
 
 #integracoes .card.info1 {
     flex-direction: row; /* Imagem à esquerda e texto à direita */
+    align-self: flex-end;
 }
 
 #integracoes .card.info2 {
     flex-direction: row-reverse; /* Card à esquerda e imagem à direita */
+    align-self: flex-start;
 }
 
 #integracoes .card.info3 {
     flex-direction: row; /* Imagem à esquerda e texto à direita */
+    align-self: flex-end;
 }
 
 #integracoes .card.info1,
@@ -266,12 +275,13 @@ footer a:hover{
 
 #integracoes .texto .destaque {
     font-size: 18px;
+    font-weight: bold;
     color: #333;
-    margin-top: 20px;
+    
 }
 
 #integracoes .texto .destaque span {
-    font-size: 32px;
+    font-size: 7rem;
     font-weight: bold;
     color: #8000ff;
 }
@@ -280,12 +290,16 @@ footer a:hover{
 @media (max-width: 768px) {
     #integracoes {
         flex-direction: column;
+        padding: 20px;
         text-align: center;
+    
     }
 
     #integracoes .card {
         flex-direction: column; /* Imagem fica acima do texto em telas menores */
-        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     #integracoes .card img {
@@ -296,6 +310,31 @@ footer a:hover{
 
     #integracoes .texto {
         align-items: center;
+        text-align: center;
+    }
+
+    #integracoes .texto .subtitulo {
+        font-size: 16px; /* Ajusta o tamanho da fonte para ficar legível em telas pequenas */
+        margin-bottom: 10px; /* Espaço abaixo do subtítulo */
+    }
+
+    #integracoes .texto .titulo {
+        font-size: 24px; /* Ajusta o tamanho do título para uma boa leitura em dispositivos móveis */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    #integracoes .texto .descricao {
+        font-size: 16px; /* Ajuste do tamanho da descrição */
+        color: #333;
+        margin-top: 10px;
+    }
+
+    #integracoes .texto .destaque {
+        font-size: 16px; /* Ajuste para destacar em telas menores */
+    }
+
+    #integracoes .texto .destaque span {
+        font-size: 4rem; /* Ajuste no tamanho do destaque */
     }
 }
 

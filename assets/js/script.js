@@ -7,9 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
         navbarMenu.classList.toggle("show");
     });
 
-    // Scroll suave para seções
+    // Fechar o menu quando qualquer link for clicado e aplicar scroll suave
     document.querySelectorAll(".nav-link").forEach(anchor => {
         anchor.addEventListener("click", function (event) {
+            // Fecha o menu
+            navbarMenu.classList.remove("show");
+            
+            // Scroll suave para seções
             event.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
             document.getElementById(targetId).scrollIntoView({
@@ -17,4 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+
 });
