@@ -137,9 +137,9 @@ footer a:hover {
     border-radius: 12px !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 100% !important;
+    max-width: 50% !important;
     text-align: center;
-    height: 250px;
+    height: 300px;
     margin: 50px;
     background:linear-gradient(#6b80941c, #fffefe) ;
     border: 1px solid #ececec;
@@ -194,7 +194,7 @@ footer a:hover {
 
 #integracoes .card {
     display: flex;
-    width: 85%;
+    width: 70%;
     align-items: center;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -236,6 +236,7 @@ footer a:hover {
 #integracoes .texto {
     display: flex;
     flex-direction: column;
+    max-height: 50%;
 }
 
 #integracoes .texto .subtitulo {
@@ -243,17 +244,18 @@ footer a:hover {
     font-weight: bold;
     text-transform: uppercase;
     color: #333;
+    
 }
 
 #integracoes .texto .titulo {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: bold;
     color: #000;
     margin: 5px 0;
 }
 
 #integracoes .texto .descricao {
-    font-size: 18px;
+    font-size: 15px;
     color: #333;
     margin-top: 10px;
 }
@@ -265,7 +267,7 @@ footer a:hover {
 }
 
 #integracoes .texto .destaque span {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: bold;
     color: #8000ff;
 }
