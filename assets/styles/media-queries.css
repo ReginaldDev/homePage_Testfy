@@ -30,6 +30,16 @@
 @media (max-width: 576px) {
     #services .service-card {
         flex: 1 1 100%;
+        height: auto; /* Ajuste automático da altura */
+        min-height: 200px; /* Valor mínimo para consistência */
+    }
+
+    #services .service-card h3 {
+        font-size: 1.2rem; /* Menor para telas menores */
+    }
+
+    #services .service-card p {
+        font-size: 0.9rem; /* Melhor leitura em mobile */
     }
 }
 
