@@ -35,11 +35,13 @@
     }
 
     #services .service-card h3 {
-        font-size: 1.2rem; /* Menor para telas menores */
+        font-weight: bold;
+        font-size: 1.3rem; /* Menor para telas menores */
     }
 
     #services .service-card p {
-        font-size: 0.9rem; /* Melhor leitura em mobile */
+        font-weight: 500;
+        font-size: 1.1rem; /* Melhor leitura em mobile */
     }
 }
 
