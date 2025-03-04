@@ -1,0 +1,83 @@
+/* Responsividade para a seção SOBRE */
+@media (max-width: 768px) {
+    #about {
+        padding: 0;
+        padding-top: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .texto {
+        max-width: 80%;
+    }
+
+    #about .descricao {
+        max-width: 100%;
+    }
+
+    #about .imagem-about {
+        display: none;
+    }
+}
+
+/* Responsividade para a seção SERVIÇOS */
+@media (max-width: 992px) {
+    #services .service-card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    #services .service-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Responsividade para a seção INTEGRAÇÕES */
+@media (max-width: 768px) {
+    #integracoes {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #integracoes .card {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #integracoes .card img {
+        display: none;
+        margin: 0 auto;
+        width: 100px;
+    }
+
+    #integracoes .texto {
+        align-items: center;
+        text-align: center;
+    }
+
+    #integracoes .texto .subtitulo {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    #integracoes .texto .titulo {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #integracoes .texto .descricao {
+        font-size: 16px;
+    }
+
+    #integracoes .texto .destaque {
+        font-size: 16px;
+    }
+
+    #integracoes .texto .destaque span {
+        font-size: 4rem;
+    }
+}

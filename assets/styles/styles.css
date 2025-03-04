@@ -23,7 +23,6 @@ header {
     background-position: center;
     background-size: cover;
     background-color: #e5e5f7;
-    
 }
 
 header h1 {
@@ -54,6 +53,7 @@ header .btn:hover {
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 /* ---------- NAVBAR ---------- */
 .navbar-brand img {
     height: 80px;
@@ -65,16 +65,18 @@ header .btn:hover {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
 /* Navbar - Efeito Hover */
 .navbar-nav .nav-link {
-    font-size: 18px; /* Tamanho padrão */
-    transition: all 0.3s ease-in-out; /* Suaviza a transição */
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #976ce0 !important; /* Cor ao passar o mouse (substitua pelo desejado) */
-    font-size: 19px; /* Aumenta o tamanho do texto ao passar o mouse */
+    color: #976ce0 !important;
+    font-size: 19px;
 }
+
 /* ---------- FOOTER ---------- */
 footer {
     background-color: #343a40;
@@ -82,7 +84,7 @@ footer {
     padding: 20px 0;
 }
 
-footer a:hover{
+footer a:hover {
     font-size: 1.2rem;
 }
 
@@ -104,7 +106,6 @@ footer a:hover{
     font-size: 32px;
     font-weight: bold;
     color: #007bff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #about .descricao {
@@ -120,38 +121,17 @@ footer a:hover{
     filter: opacity(80%);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    #about {
-        padding: 0;
-        padding-top: 10px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #about .texto{
-        max-width: 80%;
-    }
-    #about .descricao {
-        max-width: 100%;
-    }
-
-    #about .imagem-about {
-        display: none;
-    }
-}
-
 /* ---------- SEÇÃO SERVIÇOS ---------- */
 #services .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px; /* Aumentei o espaçamento entre os cards */
+    gap: 30px;
 }
 
 #services .service-card {
     padding: 25px !important;
     background-color: #fff !important;
-    border-radius: 12px !important; /* Deixei o border-radius mais suave */
+    border-radius: 12px !important;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -163,7 +143,7 @@ footer a:hover{
 
 #services .service-card h3 {
     margin-top: 10px;
-    font-size: 1.5rem; /* Maior título para mais destaque */
+    font-size: 1.5rem;
 }
 
 #services .service-card p {
@@ -172,29 +152,15 @@ footer a:hover{
 }
 
 #services h2 {
-    font-size: 2.5rem; /* Maior tamanho de título para a seção */
+    font-size: 2.5rem;
     font-weight: 700;
-    
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-/* Responsividade */
-@media (max-width: 992px) {
-    #services .service-card {
-        flex: 1 1 45%;
-    }
-}
-
-@media (max-width: 576px) {
-    #services .service-card {
-        flex: 1 1 100%;
-    }
 }
 
 /* ---------- SEÇÃO INTEGRAÇÕES ---------- */
 #integracoes {
-    background: linear-gradient(135deg,#a982ec, #65aefc);
+    background: linear-gradient(135deg, #a982ec, #65aefc);
     display: flex;
-    flex-direction: column; /* Cards em coluna */
+    flex-direction: column;
     gap: 20px;
     padding: 50px;
     flex-wrap: wrap;
@@ -213,37 +179,29 @@ footer a:hover{
 }
 
 #integracoes .card.info1 {
-    flex-direction: row; /* Imagem à esquerda e texto à direita */
+    flex-direction: row;
     align-self: flex-end;
 }
 
 #integracoes .card.info2 {
-    flex-direction: row-reverse; /* Card à esquerda e imagem à direita */
+    flex-direction: row-reverse;
     align-self: flex-start;
 }
 
 #integracoes .card.info3 {
-    flex-direction: row; /* Imagem à esquerda e texto à direita */
+    flex-direction: row;
     align-self: flex-end;
 }
 
-#integracoes .card.info1,
-#integracoes .card.info2,
-#integracoes .card.info3 {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#integracoes .card.info1:hover,
-#integracoes .card.info2:hover,
-#integracoes .card.info3:hover {
-    transform: scale(1.05); /* Aumenta o tamanho em 5% */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adiciona sombra para destaque */
+#integracoes .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 #integracoes .card img {
-    width: 50%; /* Para manter a imagem proporcional ao card */
-    max-width: 500px; /* Limite máximo para não ficar exagerado em telas grandes */
-    height: 250px; /* Ajusta automaticamente a altura com base na largura */
+    width: 50%;
+    max-width: 500px;
+    height: 250px;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -277,65 +235,12 @@ footer a:hover{
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    
 }
 
 #integracoes .texto .destaque span {
     font-size: 7rem;
     font-weight: bold;
     color: #8000ff;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    #integracoes {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    
-    }
-
-    #integracoes .card {
-        flex-direction: column; /* Imagem fica acima do texto em telas menores */
-        align-items: center;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #integracoes .card img {
-        display: none;
-        margin: 0 auto; /* Centraliza a imagem */
-        width: 100px; /* Ajusta o tamanho da imagem */
-    }
-
-    #integracoes .texto {
-        align-items: center;
-        text-align: center;
-    }
-
-    #integracoes .texto .subtitulo {
-        font-size: 16px; /* Ajusta o tamanho da fonte para ficar legível em telas pequenas */
-        margin-bottom: 10px; /* Espaço abaixo do subtítulo */
-    }
-
-    #integracoes .texto .titulo {
-        font-size: 24px; /* Ajusta o tamanho do título para uma boa leitura em dispositivos móveis */
-        margin-bottom: 10px; /* Espaço abaixo do título */
-    }
-
-    #integracoes .texto .descricao {
-        font-size: 16px; /* Ajuste do tamanho da descrição */
-        color: #333;
-        margin-top: 10px;
-    }
-
-    #integracoes .texto .destaque {
-        font-size: 16px; /* Ajuste para destacar em telas menores */
-    }
-
-    #integracoes .texto .destaque span {
-        font-size: 4rem; /* Ajuste no tamanho do destaque */
-    }
 }
 
 /*----------- Contato----------*/
@@ -351,6 +256,7 @@ footer a:hover{
 #contact p {
     padding-bottom: 50px;
 }
+
 /* ---------- LINKS ---------- */
 .mail-link {
     text-decoration: none;
