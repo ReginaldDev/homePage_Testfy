@@ -97,4 +97,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    VANTA.NET({
+        el: "#contact",
+        color: 0x007BFF,  // Cor branca para remover a linha azul
+        backgroundColor: 0xffffff,  // Fundo roxo (ajuste conforme necessário)
+        points: 10,  // Quantidade de pontos
+        maxDistance: 15,  // Distância das conexões
+        spacing: 20,  // Espaçamento entre pontos
+        showDots: false,  // Ocultar pontos para um efeito mais limpo
+    });
+});
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    VANTA.NET({
+        el: "#about",
+        color: 0x007BFF,  // Cor branca para remover a linha azul
+        backgroundColor: 0xffffff,  // Fundo roxo (ajuste conforme necessário)
+        points: 10,  // Quantidade de pontos
+        maxDistance: 15,  // Distância das conexões
+        spacing: 20,  // Espaçamento entre pontos
+        showDots: false,  // Ocultar pontos para um efeito mais limpo
+    });
+});
