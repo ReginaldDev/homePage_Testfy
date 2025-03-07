@@ -29,5 +29,72 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const aboutSection = document.getElementById('about');
+    const textElement = aboutSection.querySelector('.texto');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                textElement.classList.add('animated'); // Adiciona 'animated' ao entrar na tela
+                //observer.unobserve(aboutSection); // Desativa o observer após a animação ocorrer uma vez (opcional)
+            } else {
+                // Se quiser reverter a animação quando sair da tela (opcional):
+                textElement.classList.remove('animated');
+            }
+        });
+    }, {
+        threshold: 0.1, // Define quando a seção é considerada "visível" (10% visível)
+        rootMargin: "0px 0px -20% 0px"
+    });
+
+    observer.observe(aboutSection); // Observa a seção "Sobre Nós"
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    VANTA.NET({
+        el: document.querySelector("header"),
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xA982EC,
+        backgroundColor: 0x65AEFC,
+        points: 4.00,
+        maxDistance: 27.00,
+        spacing: 14.00,
+        showDots: false
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    VANTA.NET({
+        el: "#integracoes",
+        color: 0x007BFF,  // Azul sutil
+        backgroundColor: 0xA982EC,  // Fundo preto
+        points: 10,  // Quantidade de pontos (menos = mais sutil)
+        maxDistance: 15,  // Distância das conexões entre os pontos
+        spacing: 20,  // Espaçamento entre os pontos
+        showDots: false,  // Ocultar os pontos para um efeito mais limpo
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    VANTA.NET({
+        el: "#services",
+        color: 0x007BFF,  // Azul sutil
+        backgroundColor: 0xA982EC,  // Fundo preto
+        points: 10,  // Quantidade de pontos (menos = mais sutil)
+        maxDistance: 15,  // Distância das conexões entre os pontos
+        spacing: 20,  // Espaçamento entre os pontos
+        showDots: false,  // Ocultar os pontos para um efeito mais limpo
+    });
+});
 
 

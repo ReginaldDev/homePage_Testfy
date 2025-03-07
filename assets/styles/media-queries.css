@@ -1,50 +1,94 @@
 /* Responsividade para a seção SOBRE */
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* Telas menores que desktop padrão */
     #about {
-        padding: 0;
-        padding-top: 10px;
-        flex-direction: column;
-        text-align: center;
+        padding: 40px; /* Reduz um pouco o padding em telas menores */
+    }
+    #about .titulo {
+        font-size: 2.8rem; /* Reduz o tamanho do título em telas menores */
+    }
+    #about .imagem-about img {
+        max-width: 400px; /* Imagem um pouco menor em telas menores */
+    }
+}
+
+
+@media (max-width: 768px) { /* Telas de tablet e mobile */
+    #about {
+        padding: 30px; /* Reduz ainda mais o padding em mobile */
+        flex-direction: column; /* Layout vertical em mobile */
+        text-align: center; /* Centraliza o texto em mobile */
+        align-items: center; /* Alinha itens ao centro na vertical */
+        gap: 30px; /* Espaçamento vertical maior em mobile */
+        border-radius: 10px; /* Bordas um pouco menos arredondadas em mobile */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave em mobile */
     }
 
     #about .texto {
-        max-width: 80%;
+        max-width: 100%; /* Texto ocupa toda a largura em mobile */
+        padding-right: 0; /* Remove padding direito no mobile */
+        transform: translateX(0); /* REMOVE animação em mobile para performance (opcional) */
+        opacity: 1; /* Garante que o texto seja visível em mobile */
+        transition: none; /* REMOVE transição em mobile (opcional) */
+    }
+
+    #about .titulo {
+        font-size: 2.2rem; /* Título ainda menor em mobile */
+        margin-bottom: 15px; /* Margem inferior do título menor em mobile */
     }
 
     #about .descricao {
-        max-width: 100%;
+        font-size: 1.1rem; /* Descrição um pouco menor em mobile */
+        margin-top: 15px; /* Margem superior da descrição menor em mobile */
     }
 
     #about .imagem-about {
-        display: none;
+        display: none; /* Garante que a imagem seja exibida em mobile */
+        max-width: 80%; /* Imagem ocupa 80% da largura em mobile */
+        margin: 0 auto; /* Centraliza a imagem horizontalmente em mobile */
+    }
+    #about .imagem-about img {
+        border-radius: 8px; /* Bordas da imagem menos arredondadas em mobile */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Sombra mais suave para imagem em mobile */
     }
 }
-
 /* Responsividade para a seção SERVIÇOS */
+/* Media Query para telas médias (2 colunas) */
 @media (max-width: 992px) {
     #services .service-card {
-        flex: 1 1 45%;
+        flex-basis: calc(50% - 30px); /* 2 colunas: 50% da largura, menos a margem */
+        max-width: calc(50% - 30px); /* Garante que não ultrapasse 50% */
     }
 }
 
+/* Media Query para telas menores (1 coluna - já existente, ajustada para margens) */
+@media (max-width: 768px) {
+    #services .services-horizontal-scroll {
+        padding-left: 0; /* Remove padding lateral */
+        padding-right: 0;
+    }
+    #services .service-card {
+        flex-basis: 100%; /* 1 coluna: ocupa 100% da largura */
+        max-width: 100%; /* Garante ocupar a largura total */
+        margin-right: 0; /* Remove margem direita */
+        margin-bottom: 20px; /* Mantém margem inferior para separação vertical */
+    }
+}
+
+/* Media Query para telas ainda menores (ajustes finos opcionais) */
 @media (max-width: 576px) {
     #services .service-card {
-        flex: 1 1 100%;
-        height: auto; /* Ajuste automático da altura */
-        min-height: 200px; /* Valor mínimo para consistência */
+        min-height: 200px; /* Ajusta altura mínima para telas menores se necessário */
+        padding: 20px; /* Reduz um pouco o padding interno em telas menores */
     }
 
     #services .service-card h3 {
-        font-weight: bold;
         font-size: 1.3rem; /* Menor para telas menores */
     }
 
     #services .service-card p {
-        font-weight: 500;
         font-size: 1.1rem; /* Melhor leitura em mobile */
     }
 }
-
 /* Responsividade para a seção INTEGRAÇÕES */
 @media (max-width: 768px) {
     #integracoes {
@@ -93,3 +137,4 @@
         font-size: 4rem;
     }
 }
+
